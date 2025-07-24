@@ -17,15 +17,15 @@ addEventListener("mousemove", (event) => {
 })
 
 const observer = new IntersectionObserver((projects) => {
-    for( let entry of entries )
+    for( let project of projects )
     {
-            if (entry.isIntersecting)
+            if (project.isIntersecting)
             {
-                entry.classList.add("focus");
+                project.target.classList.add("focus");
             }
             else
             {
-                entry.target.classList.remove("focus");
+                project.target.classList.remove("focus");
             }
         }
     },
