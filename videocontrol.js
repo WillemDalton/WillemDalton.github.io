@@ -15,3 +15,25 @@ addEventListener("mousemove", (event) => {
         }
     }
 })
+
+const observer = new IntersectionObserver((projects) => {
+    for( let entry of entries )
+    {
+            if (entry.isIntersecting)
+            {
+                entry.classList.add("focus");
+            }
+            else
+            {
+                entry.target.classList.remove("focus");
+            }
+        }
+    },
+    {
+    threshold: 0.5,
+    });
+
+for( let project of projects) 
+{
+    observer.observe(project);
+}

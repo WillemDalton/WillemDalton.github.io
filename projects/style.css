@@ -35,6 +35,10 @@ p {
     margin-bottom: 5em;
 }
 
+.focus {
+    transform: scale(1.01);
+}
+
 
 @media screen and (min-width: 768px)
 {
@@ -51,18 +55,18 @@ p {
     }
 
     
-.projects {
-    position: relative;
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 50% 50%;
+    .projects {
+        position: relative;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 50% 50%;
 
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 1em;
-    padding-right: 2em;
-    margin-bottom: 5em;
-}
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 1em;
+        padding-right: 2em;
+        margin-bottom: 5em;
+    }   
 
 }
 
