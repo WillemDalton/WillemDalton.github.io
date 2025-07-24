@@ -9,14 +9,70 @@
     to   { transform: scale(1.5);}
 }
 
+.nametag {
+    text-align: center;
+    color: #F15025;
+    font-size: 10vw;
+    font-weight: 900;
+    margin: 0;
+}
+
 p {
     font-size: 12pt;
 }
 
+.artworks {
+    position: relative;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 100%;
+
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5em;
+}
+
+
+main {
+    box-sizing: border-box;
+}
+
+.focus {
+    transform: scale(1.025);
+}
+
+
 @media screen and (min-width: 768px)
 {
+    .nametag {
+        text-align: center;
+        color: #F15025;
+        font-size: 128pt;
+        font-weight: 900;
+        margin: 0;
+    }
+
     p {
         font-size: 14pt;
+    }
+
+    .artworks {
+        position: relative;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 50% 50%;
+
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 1em;
+        padding-right: 2em;
+        margin-bottom: 5em;
+    }   
+
+
+    main {
+        box-sizing: border-box;
+        padding: 0em 2em;
     }
 }
 
@@ -26,14 +82,9 @@ header {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #021c2d;
     border: 0;
     margin: 0;
-}
-
-main {
-    box-sizing: border-box;
-    padding: 0em 2em;
 }
 
 nav {
@@ -63,6 +114,7 @@ a:hover {
     height: 100%;
     z-index: -1;
 
+    overflow: hidden;
     animation-name: scale;
     animation-duration: 100s;
     animation-direction: alternate;
@@ -91,19 +143,31 @@ h3 {
     padding-bottom: 2em;
 }
 
-.about {
-    position: relative;
-    z-index: 10;
-    background-color: white;
-    opacity: 0.9;
-    padding: 1em;
-    margin-bottom: 5em;
+.description {
+    font-style: italic;
 }
 
-em {
+.artwork {
+    border: 2pt solid rgba(0, 0, 0, 0.154);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.076);
+}
+
+img {
+    border: 2pt solid black;
+}
+
+.name {
+    font-size: 20pt;
+    text-align: center;
+    padding-bottom: 0.5em;
     color: #F15025;
     font-weight: 600;
-    font-style: normal;
+    font-style: italic;
 }
 
 footer {
