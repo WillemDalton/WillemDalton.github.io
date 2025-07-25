@@ -1,33 +1,21 @@
 let projects = document.querySelectorAll(".project")
 
-addEventListener("mousemove", (event) => {
-    for( let project of projects) 
+const observer = new IntersectionObserver((projects) => {
+    for( let project of projects )
     {
-        let video = project.querySelector('video')
-    
-        if(project.matches(':hover'))
+        let video = project.target.querySelector("video");
+            
+        if (project.isIntersecting)
         {
+            project.target.classList.add("focus");
             video.play();
         }
         else
         {
-            video.pause()
+            project.target.classList.remove("focus");
+            video.pause();
         }
     }
-})
-
-const observer = new IntersectionObserver((projects) => {
-    for( let project of projects )
-    {
-            if (project.isIntersecting)
-            {
-                project.target.classList.add("focus");
-            }
-            else
-            {
-                project.target.classList.remove("focus");
-            }
-        }
     },
     {
     threshold: 0.5,

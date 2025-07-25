@@ -68,7 +68,7 @@ main {
             "visitor  wish"
             "visitor  midas"
             "decay    spaceman"
-            "451      451";
+            "f451      f451";
 
         z-index: 10;
         background-color: rgba(255, 255, 255, 0.5);
@@ -170,7 +170,6 @@ img {
     align-self: center;
 }
 
-.f451 { grid-area: 451; }
 .lost { grid-area: lost }
 .decay { grid-area: decay; }
 .visitor { grid-area: visitor; }
@@ -179,6 +178,16 @@ img {
 .beast {grid-area: beast; }
 .midas {grid-area: midas; }
 .spaceman {grid-area: spaceman; }
+.f451 { grid-area: f451; }
+
+.doubleWork {
+    width: 100%;
+    text-align: center;
+}
+
+.doubleWork > img {
+    width: 45%;
+}
 
 .name {
     font-size: 20pt;
