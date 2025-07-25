@@ -60,7 +60,15 @@ main {
         position: relative;
         display: grid;
         gap: 1em;
+
         grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "spring   lost"
+            "beast    lost"
+            "visitor  wish"
+            "visitor  midas"
+            "decay    spaceman"
+            "451      451";
 
         z-index: 10;
         background-color: rgba(255, 255, 255, 0.5);
@@ -69,10 +77,9 @@ main {
         margin-bottom: 5em;
     }   
 
-
     main {
         box-sizing: border-box;
-        padding: 0em 2em;
+        padding: 0em 8em;
     }
 }
 
@@ -159,7 +166,19 @@ h3 {
 
 img {
     border: 2pt solid black;
+    width: 90%;
+    align-self: center;
 }
+
+.f451 { grid-area: 451; }
+.lost { grid-area: lost }
+.decay { grid-area: decay; }
+.visitor { grid-area: visitor; }
+.spring { grid-area: spring; }
+.wish { grid-area: wish; }
+.beast {grid-area: beast; }
+.midas {grid-area: midas; }
+.spaceman {grid-area: spaceman; }
 
 .name {
     font-size: 20pt;
