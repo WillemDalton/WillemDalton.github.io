@@ -1,0 +1,6 @@
+[submodule "montecarlo"]
+	path = montecarlo
+	url = https://github.com/WillemDalton/montecarlo.git
+[submodule "assignment_tracker"]
+	path = assignment_tracker
+	url = https://github.com/WillemDalton/assignment_tracker
