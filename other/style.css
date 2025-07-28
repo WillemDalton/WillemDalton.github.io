@@ -25,7 +25,18 @@ p {
     position: relative;
     display: grid;
     gap: 1em;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "spring"
+        "lost"
+        "beast"
+        "visitor"  
+        "wish"
+        "midas"
+        "decay"
+        "spaceman"
+        "f451";
+;
 
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.5);
